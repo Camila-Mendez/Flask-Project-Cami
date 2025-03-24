@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JLPT resources - Michan sensei の日本語</title>
+     <meta name="viewport" content="width=device width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Inicio</a>
+        <a href="{{ url_for('about') }}">Acerca de Nosotros</a>
+        <a href="{{ url_for('contact') }}">Contacto</a>
+    </div>
+    <div class="jumbotron4">
+        <img src="{{ url_for('static', filename='Michansenseinonihongo.png') }}" width="300" height="300" alt="Michan Sensei Logo">
+    </div>
+    {% block content %}
+        <div class="jumbotron">
+            <h1 >Quiz Result</h1>
+        <p>Your score: {{ score }} out of {{ total_questions }}</p>
+        <a class='button' href="{{ url_for('jlpt') }}">Back to Home</a>
+        </div>
+    {% endblock %}
+<footer>
+    <div class="jumbotron3">
+        <p>Developed by Camila Méndez</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Michan sensei の日本語{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='Michansenseinonihongo.png') }}" type="image/png">
+
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Inicio</a>
+        <a href="{{ url_for('about') }}">Acerca de Nosotros</a>
+        <a href="{{ url_for('contact') }}">Contacto</a>
+    </div>
+    <div class="jumbotron4">
+        <img src="{{ url_for('static', filename='Michansenseinonihongo.png') }}" width="300" height="300" alt="Michan Sensei Logo">
+    </div>
+
+    <!-- Bloque de contenido dinámico -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <div class="jumbotron3">
+            <p>Developed by Camila Méndez</p>
+        </div>
+    </footer>
+</body>
+</html>

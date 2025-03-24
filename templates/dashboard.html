@@ -1,0 +1,146 @@
+
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+        .navbar {
+            background-color: #FFCFBE;
+            padding: 10px 20px;
+            text-align: center;
+            border-bottom: 2px solid #8f776f;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .navbar a {
+            color: #8f776f;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            background-color: #8f776f;
+            color: #ffffff;
+        }
+        .jumbotron {
+            background-color: #FFCFBE;
+            color: #8f776f;
+            padding: 50px 15px;
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #333;
+            color: #F1F3C2;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #555;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .team-member {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .team-member img {
+            width: 100%;
+            height: auto;
+        }
+        .team-member .panel-body {
+            padding: 15px;
+        }
+        .team-member .panel-footer {
+            background-color: #FFCFBE;
+            padding: 10px;
+            color: #8f776f;
+            font-family: 'Quicksand', sans-serif;
+
+        }
+        .team-member h3, .team-member h4 {
+            margin: 0;
+        }
+        .team-member p {
+            margin: 10px 0;
+        }
+        footer {
+            background-color: #FFCFBE;
+            padding: 20px;
+            text-align: center;
+        }
+        .jumbotron3 {
+            background-color: #ffffff;
+            color: #8f776f;
+            padding: 20px;
+            font-family: 'Quicksand', sans-serif;
+        }
+    </style>
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Michan Sensei の日本語{% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+       <h1 class="dashboard">Bienvenid@, {{ username }}</h1>
+       <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+    </div>
+    <div class="container">
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='JLPT.png') }}" alt="JLPT resources">
+                <div class="panel-body">
+                    <a href="{{url_for('jlpt')}}" class="btn" >JLPT resources</a>
+                </div>
+                <div class="panel-footer">
+                    <h3>JLPT resources</h3>
+                    <h4>Study Material</h4>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='Michan.png') }}" alt="Concepto original/Vocera de 頑張って">
+                <div class="panel-body">
+                    <p>Fundadora de <strong>"Michan sensei の日本語"</strong></p>
+                </div>
+                <div class="panel-footer">
+                    <h3>Camila Méndez</h3>
+                    <h4>Certificada N4</h4>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='HAIKU.png') }}" alt="Control de calidad">
+                <div class="panel-body">
+                    <a href="{{url_for('haiku')}}" class="btn" >Haiku resources</a>
+                </div>
+                <div class="panel-footer">
+                    <h3>Culture learning</h3>
+                    <h4>Haiku Workshops</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}Cursos - Michan Sensei の日本語{% endblock %}
+
+{% block content %}
+<style>
+    .level-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .level-box {
+        background: linear-gradient(to bottom, #FFCFBE, #ffffff);
+        color: #8f776f;
+        width: 200px;
+        height: 150px;
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+    }
+
+    .level-box:hover {
+        transform: scale(1.05);
+    }
+
+    .level-box h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .level-box button {
+        width: 80%;
+        padding: 8px;
+        background-color: #333;
+        color: #F1F3C2;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .level-box button:hover {
+        background-color: #555;
+    }
+</style>
+
+<div class="level-container">
+    <!-- Cuadro N5 -->
+    <div class="level-box">
+        <h3>Nivel N5</h3>
+        <p>Conceptos básicos para iniciar el aprendizaje del japonés.</p>
+        <button onclick="window.location.href='/n5'">Ver N5</button>
+    </div>
+
+    <!-- Cuadro N4 -->
+    <div class="level-box">
+        <h3>Nivel N4</h3>
+        <p>Consolidación de gramática y vocabulario elemental.</p>
+        <button onclick="window.location.href='/n4'">Ver N4</button>
+    </div>
+
+    <!-- Cuadro N3 -->
+    <div class="level-box">
+        <h3>Nivel N3</h3>
+        <p>Profundiza en gramática intermedia y lecturas complejas.</p>
+        <button onclick="window.location.href='/n3'">Ver N3</button>
+    </div>
+
+    <!-- Cuadro N2 -->
+    <div class="level-box">
+        <h3>Nivel N2</h3>
+        <p>Preparación avanzada con énfasis en textos complejos.</p>
+        <button onclick="window.location.href='/n2'">Ver N2</button>
+    </div>
+
+    <!-- Cuadro N1 -->
+    <div class="level-box">
+        <h3>Nivel N1</h3>
+        <p>Máster en comprensión y uso del japonés a nivel profesional.</p>
+        <button onclick="window.location.href='/n1'">Ver N1</button>
+    </div>
+</div>
+{% endblock %}

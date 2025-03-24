@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JLPT resources - Michan sensei の日本語</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            text-align: left;
+        }
+        .navbar {
+            background-color: #FFCFBE;
+            padding: 10px 20px;
+            text-align: center;
+            border-bottom: 2px solid #8f776f;
+        }
+        .navbar a {
+            color: #8f776f;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            background-color: #8f776f;
+            color: #ffffff;
+        }
+        .jumbotron4 {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .jumbotron4 img {
+            max-width: 350px;
+            height: auto;
+            display: block; /* centrada */
+            margin: 0 auto;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #333;
+            color: #F1F3C2;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #555;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #FFCFBE;
+            color: #8f776f;
+            text-align: center;
+        }
+        /* Estilo Window-Like para las preguntas */
+        .question-container {
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin: 20px 0;
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+        }
+        .question-container:hover {
+            transform: scale(1.01);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        fieldset {
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+        legend {
+            font-size: 18px;
+            font-weight: bold;
+            color: #8f776f;
+            margin-bottom: 10px;
+        }
+        label {
+            font-size: 16px;
+            color: #333;
+            display: block;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Inicio</a>
+        <a href="{{ url_for('about') }}">Acerca de Nosotros</a>
+        <a href="{{ url_for('contact') }}">Contacto</a>
+    </div>
+    <div class="jumbotron4">
+        <img src="{{ url_for('static', filename='Michansenseinonihongo.png') }}" alt="Michan Sensei Logo">
+    </div>
+    {% block content %}
+    <div class="quiz-container">
+        <h1>{{ quiz_title }}</h1>
+        <form method="POST" action="{{ url_for('result') }}">
+            {% for question in questions %}
+                <div class="question-container">
+                    <fieldset>
+                        <legend>{{ question['question_text'] }}</legend>
+                        {% for option in question['options'] %}
+                            <label>
+                                <input type="radio" name="{{ question['id'] }}" value="{{ option }}">
+                                {{ option }}
+                            </label>
+                        {% endfor %}
+                    </fieldset>
+                </div>
+            {% endfor %}
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+    {% endblock %}
+    <footer>
+        <p>Developed by Camila Méndez</p>
+    </footer>
+</body>
+</html>

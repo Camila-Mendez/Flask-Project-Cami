@@ -1,0 +1,194 @@
+/* General Styles */
+body {
+    background-color: #FFCFBE;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #FFCFBE;
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom: 2px solid #8f776f;
+}
+.navbar a {
+    color: #8f776f;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+.navbar a:hover {
+    background-color: #8f776f;
+    color: #ffffff;
+}
+
+/* Jumbotron Styles */
+.jumbotron {
+    background: linear-gradient(to bottom, #FFCFBE, #ffffff);
+    color: #8f776f;
+    padding: 50px 15px;
+    text-align: center;
+}
+
+.jumbotron2, .jumbotron3, .jumbotron4 {
+    text-align: center;
+    padding: 20px 10px;
+}
+.jumbotron2 {
+    background-color: #ffffff;
+    color: #ffffff;
+}
+.jumbotron3 {
+    background-color: #ffffff;
+    color: #8f776f;
+}
+.jumbotron4 {
+    background-color: #ffffff;
+    background-image: url('cherry.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carousel-images img {
+    width: 100%;
+    height: auto;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border-radius: 3px;
+}
+.next {
+    right: 0;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Contact Form Styles */
+.contact-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.contact-form input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+.button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #F1F3C2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #555;
+}
+
+/* Dashboard Styles */
+.dashboard {
+    text-align: center;
+    font-family:'Oleo script', sans-serif;
+}
+.logout-link {
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.logout-link:hover {
+    background-color: #A1D6B2;
+    color: #333;
+}
+
+/* Resource Sections */
+.column1, .column2, .column3 {
+    padding: 10px;
+    margin: 10px;
+    height: 300px;
+}
+.column1 {
+    float: left;
+}
+.column2 {
+    float: center;
+}
+.column3 {
+    float: right;
+}
+
+/* Additional Styles */
+.equipo .panel-heading {
+    background-color: #ffbdcb;
+    color: #161313;
+    padding: 25px;
+    border-radius: 5px 0 0 0;
+}
+
+.panel-footer {
+    background-color: #462a1b;
+}
+.panel-footer h4 {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.fond-imagen {
+    width: 100%;
+    height: 400px;
+    background-image: url('3.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.fieldset {
+    margin-bottom: 10px;
+}

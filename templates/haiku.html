@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Haiku resources - Michan sensei の日本語</title>
+     <meta name="viewport" content="width=device width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+        .navbar {
+            background-color: #FFCFBE;
+            padding: 10px 20px;
+            text-align: center;
+            border-bottom: 2px solid #8f776f;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .navbar a {
+            color: #8f776f;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            background-color: #8f776f;
+            color: #ffffff;
+        }
+        .jumbotron2 {
+            background-color: #ffffff;
+            color: #ffffff;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        .jumbotron3 {
+            background-color: #ffffff;
+            color: #8f776f;
+            padding: 20px 10px;
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .jumbotron {
+            background-color: #FFCFBE;
+            color: #8f776f;
+            padding: 50px 15px;
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #333;
+            color: #F1F3C2;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #555;
+        }
+                .carousel {
+           position: relative;
+           max-width: 100%;
+           margin: auto;
+           overflow: hidden;
+        }
+
+        .carousel-images {
+           display: flex;
+           transition: transform 0.5s ease;
+        }
+
+        .carousel-images img {
+           width: 100%;
+           height: auto;
+        }
+
+        .prev, .next {
+           position: absolute;
+           top: 50%;
+           width: auto;
+           padding: 16px;
+           margin-top: -22px;
+           color: white;
+           font-weight: bold;
+           font-size: 24px;
+           cursor: pointer;
+           border-radius: 3px;
+           user-select: none;
+           background-color: rgba(0,0,0,0.5);
+        }
+
+        .next {
+           right: 0;
+        }
+
+        .prev:hover, .next:hover {
+           background-color: rgba(0,0,0,0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Inicio</a>
+        <a href="{{ url_for('about') }}">Acerca de Nosotros</a>
+        <a href="{{ url_for('contact') }}">Contacto</a>
+    </div>
+    <div class="jumbotron4">
+        <img src="{{ url_for('static', filename='Michansenseinonihongo.png') }}" width="300" height="300" alt="Michan Sensei Logo">
+    </div>
+    <div class="jumbotron">
+        <h1>Haiku Resources</h1>
+            <a href="https://drive.google.com/file/d/1KNem_tEjLNwsw9g-_9BKCUac2iQhEk0g/view?usp=sharing" class="btn" >Haiku resources 1</a>
+            <a class='btn' href="{{ url_for('dashboard') }}">Devuelta al su página de inicio</a>
+
+
+    </div>
+    <div class="jumbotron3">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XqTYy_NGX58?si=syBYX70gXxggBhve" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+<footer>
+    <div class="jumbotron3">
+        <p>Developed by Camila Méndez</p>
+    </div>
+</footer>
+</body>
+</html>
