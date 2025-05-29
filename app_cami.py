@@ -145,10 +145,10 @@ def me():
     return redirect(url_for('login'))
 
 
-@app.route('/dashboard/courses')
+@app.route('/dashboard/jlpt/courses')
 def course():
     if 'username' in session:
-        return render_template('.html')
+        return render_template('courses.html')
     return redirect(url_for('login'))
 
 
