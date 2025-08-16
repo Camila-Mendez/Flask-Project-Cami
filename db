@@ -4,3 +4,4 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mi_database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db= SQLAlchemy(app)
+#This code is not being used in the main app
