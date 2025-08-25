@@ -151,6 +151,11 @@ def course():
         return render_template('courses.html')
     return redirect(url_for('login'))
 
+@app.route('/dashboard/jlpt/courses/N5')
+def n5():
+    if 'username' in session:
+        return render_template('N5.html')
+    return redirect(url_for('login'))
 
 @app.route('/logout')
 def logout():
