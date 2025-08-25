@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Cursos - Michan Sensei の日本語{% endblock %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Este es el nivel N5</h1>
+    <p> N5 es el nivel más básico de japonés. Comprende alrededor de 50 Kanji básico y de uso cotidiano, </p>
+    <p> así como la gramática necesaria para una conversación básica.</p>
+</div>
+{% endblock %} 
