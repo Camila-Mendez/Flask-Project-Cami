@@ -46,6 +46,19 @@
     .level-box button:hover {
         background-color: #555;
     }
+    .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #333;
+            color: #F1F3C2;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #555;
+        }
 </style>
 
 <div class="level-container">
@@ -53,7 +66,7 @@
     <div class="level-box">
         <h3>Nivel N5</h3>
         <p>Conceptos básicos para iniciar el aprendizaje del japonés.</p>
-        <button onclick="window.location.href='/n5'">Ver N5</button>
+         <a href="{{url_for('N5')}}" class="button" >Ver N5</a>
     </div>
 
     <!-- Cuadro N4 -->
@@ -83,5 +96,11 @@
         <p>Máster en comprensión y uso del japonés a nivel profesional.</p>
         <button onclick="window.location.href='/n1'">Ver N1</button>
     </div>
+    <div class="level-box">
+        <h3>Return</h3>
+        <p>Deuelta a tu dashboard.</p>
+        <a class='btn' href="{{ url_for('dashboard') }}">Devuelta al su página de inicio</a>
+    </div>
+
 </div>
 {% endblock %}
