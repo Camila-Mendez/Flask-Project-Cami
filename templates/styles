@@ -68,7 +68,7 @@ body {
             0 0 100px cyan, 0 0 200px cyan;
             background-color: #555;
         }
-                .carousel {
+        .carousel {
            position: relative;
            max-width: 100%;
            margin: auto;
