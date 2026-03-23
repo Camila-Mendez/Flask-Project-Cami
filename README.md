@@ -3,6 +3,23 @@
 Full-stack web application designed to support Japanese language learning from N5 to N1 levels, integrating user management, course tracking, and evaluation features.
 
 ---
+## ⚠️ Note
+
+This project uses an in-memory user system for demonstration purposes.  
+No real database or persistent storage is currently implemented.
+
+Passwords are securely hashed using Werkzeug.
+
+Future versions will include database integration (e.g., SQL Server).## ⚠️ Note
+
+This project uses an in-memory user system for demonstration purposes.  
+No real database or persistent storage is currently implemented.
+
+Passwords are securely hashed using Werkzeug.
+
+Future versions will include database integration (e.g., SQL Server).
+
+---
 
 ## 🌸Overview
 
