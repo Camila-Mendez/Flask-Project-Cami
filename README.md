@@ -16,7 +16,7 @@ The system was built to combine educational structure with scalable backend desi
 
 - **Backend:** Python (Flask)
 - **Frontend:** HTML, CSS, JavaScript
-- **Database:** SQL Server
+- **Database:** SQL Server (not yet connected)
 - **Version Control:** Git & GitHub
 
 ---
@@ -74,3 +74,21 @@ Open in browser:
 ```bash
 http://localhost:5000
 ```
+
+---
+
+## 🔗 Future Improvements
+
+- Add spaced repetition system (SRS)
+- Connect database
+- Improve UI/UX design
+- Implement API integration for external resources
+- Add analytics dashboard for user progress
+
+---
+
+## 👩‍💻 Author
+
+Camila Méndez
+- LinkedIn: https://www.linkedin.com/in/camila-isabel-mendez-reyes
+- GitHub: https://github.com/your-username
