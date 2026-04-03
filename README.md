@@ -100,5 +100,5 @@ http://localhost:5000
 ## 👩‍💻 Author
 
 Camila Méndez
-- LinkedIn: https://www.linkedin.com/in/camila-isabel-mendez-reyes
+- LinkedIn: [https://www.linkedin.com/in/camila-isabel-mendez-reyes](https://www.linkedin.com/in/camila-isabel-mendez-reyes-b054222b4/)
 - GitHub: https://github.com/Camila-Mendez
